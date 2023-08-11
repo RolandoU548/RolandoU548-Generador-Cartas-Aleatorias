@@ -6,6 +6,52 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+  const boton = document.getElementById("miBoton");
+  boton.addEventListener("click", generarCarta);
 };
+
+function generarCarta() {
+  const carta = document.getElementById("miCarta");
+  const palos = carta.querySelectorAll(".palo");
+  let elementoPalo = generarPalo();
+  for (let palo of palos) {
+    palo.innerHTML = elementoPalo;
+    if (elementoPalo == "♦" || elementoPalo == "♥") {
+      palo.style.color = "red";
+    } else {
+      palo.style.color = "black";
+    }
+  }
+
+  const valores = carta.querySelectorAll(".valor");
+  let elementoValor = generarValor();
+  for (let valor of valores) {
+    valor.innerHTML = elementoValor;
+  }
+}
+
+function generarPalo() {
+  let palosCarta = ["♦", "♥", "♠", "♣"];
+  let paloAleatorio = Math.floor(Math.random() * palosCarta.length);
+  return palosCarta[paloAleatorio];
+}
+
+function generarValor() {
+  let valoresCarta = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K"
+  ];
+  let valorAleatorio = Math.floor(Math.random() * valoresCarta.length);
+  return valoresCarta[valorAleatorio];
+}

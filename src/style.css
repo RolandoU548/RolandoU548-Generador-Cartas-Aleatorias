@@ -1,1 +1,47 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: green;
+}
+
+div.container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 400px;
+  height: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.card > span:first-child {
+  align-self: flex-start;
+}
+
+.card > span:last-child {
+  align-self: flex-end;
+}
+
+span.palo {
+  font-size: 100px;
+}
+
+span.valor {
+  font-size: 150px;
+}
+
+button {
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 30px;
+}
