@@ -11,22 +11,24 @@ window.onload = function() {
 };
 
 function generarCarta() {
-  const carta = document.getElementById("miCarta");
-  const palos = carta.querySelectorAll(".palo");
-  let elementoPalo = generarPalo();
-  for (let palo of palos) {
-    palo.innerHTML = elementoPalo;
-    if (elementoPalo == "♦" || elementoPalo == "♥") {
-      palo.style.color = "red";
-    } else {
-      palo.style.color = "black";
+  const cartas = document.querySelectorAll(".card");
+  for (const carta of cartas) {
+    const palos = carta.querySelectorAll(".palo");
+    let elementoPalo = generarPalo();
+    for (let palo of palos) {
+      palo.innerHTML = elementoPalo;
+      if (elementoPalo == "♦" || elementoPalo == "♥") {
+        palo.style.color = "red";
+      } else {
+        palo.style.color = "black";
+      }
     }
-  }
 
-  const valores = carta.querySelectorAll(".valor");
-  let elementoValor = generarValor();
-  for (let valor of valores) {
-    valor.innerHTML = elementoValor;
+    const valores = carta.querySelectorAll(".valor");
+    let elementoValor = generarValor();
+    for (let valor of valores) {
+      valor.innerHTML = elementoValor;
+    }
   }
 }
 
