@@ -6,40 +6,37 @@ body {
 
 div.container-fluid {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   height: 100vh;
+  flex-wrap: wrap;
 }
 
 .card {
-  width: 400px;
+  width: 30%;
   height: 500px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 50px;
   border-radius: 20px;
-  padding: 20px;
+  margin: 30px 40px;
 }
 
-.card > span:first-child {
+.card > div:first-child {
   align-self: flex-start;
 }
 
-.card > span:last-child {
+.card > div:last-child {
   align-self: flex-end;
 }
 
-span.palo {
+div.palo {
   font-size: 100px;
 }
 
-span.valor {
-  font-size: 150px;
+div.valor {
+  font-size: 200px;
 }
 
 button {
-  width: 200px;
+  width: 400px;
   text-align: center;
   padding: 10px;
   border-radius: 20px;
